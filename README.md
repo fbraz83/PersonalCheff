@@ -22,8 +22,19 @@ venv\Scripts\activate
 python -m pip install django==3.2
 python -m pip freeze 
 ```
-- [ ] Criar o projeto personalCheff
-- [ ] Subir o servidor e testar o projeto
+- [X] Criar o projeto personalCheff
+```
+django-admin.py startproject PersonalCheffProj
+```
+- [X] Subir o servidor e testar o projeto
+``` 
+Entrar na pasta do projeto 
+cd PersonalCheffProj
+
+Executar o projeto no servidor
+python manage.py runserver
+```
+
 - [ ] Alterar o idioma do projeto para `pt-br`
 - [ ] Alterar o timezone do projeto para `America/São_Paulo`
 - [ ] Criar o app receitas
