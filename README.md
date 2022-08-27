@@ -54,6 +54,9 @@ python manage.py startapp receitas
 no arquivo setting.py adicionar o app receitas na lista de app INSTALED APP
 ```
 - [ ] Configurar a rota inicial (index)
+```
+Criar uma pasta urls dentro de receitas 
+```
 - [ ] Registrar a rota inicial
 - [ ] Criar o arquivo index.html 
 
