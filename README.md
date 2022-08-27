@@ -49,7 +49,10 @@ Link para time zone 'list of pytz time zones · GitHub'
 *Preciso estar dentro da pasta do projeto (PeronalCheffProj) 
 python manage.py startapp receitas
 ```
-- [ ] Registrar o app receitas
+- [X] Registrar o app receitas
+```
+no arquivo setting.py adicionar o app receitas na lista de app INSTALED APP
+```
 - [ ] Configurar a rota inicial (index)
 - [ ] Registrar a rota inicial
 - [ ] Criar o arquivo index.html 
