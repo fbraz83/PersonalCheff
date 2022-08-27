@@ -39,7 +39,11 @@ python manage.py runserver
 ```
 Linha 106 da settings.py LANGUAGE_CODE = 'pt-br'
 ```
-- [ ] Alterar o timezone do projeto para `America/São_Paulo`
+- [X] Alterar o timezone do projeto para `America/São_Paulo`
+```
+Alterado a time zone no settings.py para America_Sao_Paulo.
+Link para time zone 'list of pytz time zones · GitHub'
+```
 - [ ] Criar o app receitas
 - [ ] Registrar o app receitas
 - [ ] Configurar a rota inicial (index)
