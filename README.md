@@ -46,6 +46,7 @@ Link para time zone 'list of pytz time zones · GitHub'
 ```
 - [X] Criar o app receitas
 ```
+*Preciso estar dentro da pasta do projeto (PeronalCheffProj) 
 python manage.py startapp receitas
 ```
 - [ ] Registrar o app receitas
