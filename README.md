@@ -44,7 +44,10 @@ Linha 106 da settings.py LANGUAGE_CODE = 'pt-br'
 Alterado a time zone no settings.py para America_Sao_Paulo.
 Link para time zone 'list of pytz time zones · GitHub'
 ```
-- [ ] Criar o app receitas
+- [X] Criar o app receitas
+```
+python manage.py startapp receitas
+```
 - [ ] Registrar o app receitas
 - [ ] Configurar a rota inicial (index)
 - [ ] Registrar a rota inicial
