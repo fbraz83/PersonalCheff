@@ -52,13 +52,40 @@ python manage.py startapp receitas
 - [X] Registrar o app receitas
 ```
 no arquivo setting.py adicionar o app receitas na lista de app INSTALED APP
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'receitas' ,
 ```
-- [ ] Configurar a rota inicial (index)
+- [X] Configurar a rota inicial (index)
 ```
 Criar uma pasta urls dentro de receitas 
+
+from django.urls import path
+from.import views
+urlpatterns = [
+    path('', views.index,name= 'index')
+    
 ```
-- [ ] Registrar a rota inicial
-- [ ] Criar o arquivo index.html 
+- [X] Registrar a rota inicial
+    - Dentro da pasta PersonalCheffProj (app) abrir o arquivo 'urls.py'
+    '''python
+    from django.contrib import admin
+    from django.urls import path, include
+
+    urlpatterns = [
+        path('admin/', admin.site.urls)
+        path('', include('receitas.urls'))
+    ]
+
+- [X] Criar o arquivo index.html 
+    - Dentro da pasta receita(app) crie a pasta 'templates'
+    - Dentro da pasta Template crie a arquiv index.html
+    
 
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
