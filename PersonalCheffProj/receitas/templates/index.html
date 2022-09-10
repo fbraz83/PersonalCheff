@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,20 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PersonalCheff</title>
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+    <link rel="shortcut icon" href="{% static 'logo3.png' %}" type="image/x-icon">
 </head>
 <body>
-    <h1> PersonalCheff</h1>
+    <h1>
+        <img src="{% static 'logo3.png' %}" class="imagem-logo">
+        PersonalCheff
+    </h1>
     <h2>Seu Site de Receitas</h2>
 
-<table border="1">
+<table border="1" class="tabela-receita">
     <tr>
         <th>Receita</th>
         <th>Vídeo</th>
         <th>Ações</th>
     </tr>
     <tr>
-        <td>Suco de laranja</td>
-        <td><a href="https://www.youtube.com/watch?v=vjnX8_v6XDM">Ver vídeo</a></td>
+        <td>  
+            <img src="{% static 'laranja.png' %}" class="icone-suco">
+            Suco de laranja
+        </td>
+              <td><a href="https://www.youtube.com/watch?v=vjnX8_v6XDM">Ver vídeo</a></td>
         <td><a href="sucodelaranja">Ver receita completa</a></td>        
     </tr>
     <tr>
@@ -27,10 +36,16 @@
         <td><a href="sucodelimao">Ver receita completa</a></td>
     </tr>
     <tr>
-        <td>Caipirnha de limão</td>
+        <td>Caipirinha de limão</td>
         <td><a href="https://www.youtube.com/watch?v=qVRqxJVcdOU"> Ver vídeo</a></td>
         <td><a href="caipirinhadelimao">Ver receita completa</a></td>
     </tr>
+    <tr>
+        <td>Caipirosca de Morango</td>
+        <td><a href="https://www.youtube.com/watch?v=QRjlDAwz2pI"> Ver vídeo</a></td>
+        <td><a href="caipiroskademorango">Ver receita completa</a></td>
+    </tr>
+    
 </table>
 </p>
 
