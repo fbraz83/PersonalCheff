@@ -6,4 +6,9 @@ def index(request):
 def sucodelaranja(request):
     return render(request, 'sucodelaranja.html')
 
+def sucodelimao(request):
+    return render(request, 'sucodelimao.html')
+
+def caipirinhadelimao(request):
+    return render(request, 'sucodelimao')
 

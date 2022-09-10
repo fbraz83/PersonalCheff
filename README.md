@@ -86,6 +86,7 @@ urlpatterns = [
     - Dentro da pasta receita(app) crie a pasta 'templates'
     - Dentro da pasta Template crie a arquiv index.html
     
+    
 
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
