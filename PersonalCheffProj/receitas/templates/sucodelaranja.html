@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PersonalCheff</title>
-</head>
-<body>
-    <h1> PersonalCheff</h1>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'partials/header.html' %}
+{% include 'partials/menu.html' %}
+
     <h2>Receita suco de laranja</h2>
     <h3>Modo de preparo</h3>
     <ul>
@@ -15,6 +11,9 @@
         <li>Esprema a laranja</li>
         <li>Adoce a laranja</li>
     </ul>
+    <p>
+        <a href="{% url 'index' %}">Página inicial</a>
+    </p>
 
-</body> 
-</html>
+{% include 'partials/footer.html' %}
+{% endblock %}
