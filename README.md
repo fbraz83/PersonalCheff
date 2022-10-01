@@ -203,7 +203,9 @@ para incluir as partials nos arquivos de destino utilize o comando include da se
 
         admin.site.register(Receitas)
         '''
-        
+[X] Trazendo os dados do banco de dados
+
+[] Exibição das páginas individuais das receitas
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 [⬆ Voltar ao topo](#nome-do-projeto)<br>
