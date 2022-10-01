@@ -115,11 +115,11 @@ urlpatterns = [
 <a href="{% url 'index' %}">Página inicial</a>
 
  Criando o base.html
- na pasta templatescrie o arquivo base.html. Esse arquivo contém todo o código de estrutura comum à todas as páginas. Nesse arquivo deve ficar tudo que tiver antes do body e tudo que tiver depois do /body.
-nesse arquivo deve conter o {% load static %}
-nesse arquivo, no local aonde será carregado o conteúdo das outras páginas, deve existir os delimitadores {% block content %} e {% endblock %}
-o código do base.html será algo parecido com:
-{% load static %}
+    -na pasta templatescrie o arquivo base.html. Esse arquivo contém todo o código de estrutura comum à todas as páginas. Nesse arquivo deve ficar tudo que tiver antes do body e tudo que tiver depois do /body.
+    nesse arquivo deve conter o {% load static %}
+    nesse arquivo, no local aonde será carregado o conteúdo das outras páginas, deve existir os delimitadores {% block content %} e {% endblock %}
+    o código do base.html será algo parecido com:
+    {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -139,20 +139,62 @@ o código do base.html será algo parecido com:
 
  Separando em partials
 
-criar uma pasta chamada partials dentro da pasta templates
+[X] criar uma pasta chamada partials dentro da pasta templates
 dentro da pasta partialscrie os arquivos que serão as partes globais utilizadas no seu projeto como header.html, footer.html, menu.html, side-bar.html, banner.html, etc. No nosso exemplo criamos as partials header.html e footer.html
 insira em cada um dos arquivos partials seus códigos correspondentes. Exemplo: no arquivo header.html eu insiro todo o conteúdo que eu quero que seja apresentado no cabeçalho da minha aplicação. Não se esqueça do comando {% load static %}.
 para incluir as partials nos arquivos de destino utilize o comando include da seguinte maneira: {% include 'partials/header.html' %}
 
- Renderizando dados dinamicamente
- Criando um dicionario com as receitas
- Criando o banco de dados(MySQL/MariaDB)
- Instalando o conector do bando de dados MySQL
- Criando o modelo da receita
- Criando a migration (mapeamento)
- Realizando a migration
- Registrando um modelo no admin
- Criando um usuário para o ambiente administrativo
+ [X] Renderizando dados dinamicamente
+ [X] Criando um dicionario com as receitas
+ [X]Criando o banco de dados(MySQL/MariaDB)
+ [X]Instalando o conector do bando de dados MySQL
+    'pip install mysqlclient'
+
+ [X] - Configurar a conexão com o mysql
+    NO arquivo 'seting.py', na linha ~78 configurar a conexão para o seu banco de dados como exemplo
+        '''python 
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'personalcheff_bd',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+        '''
+
+
+ [X]Criando o modelo da receita
+    - Modelo é a representação das tabelas no banco de dados. Cada classe em uma model equivale a uma tabela.
+    - No arquivo 'receitas\models.py' crie a classe para a representação da tabela de receitas:
+        '''python
+        from django.db import models
+        from datetime import datetime
+
+        class Receitas(models.Model):
+         nome_receita= models.CharField(max_length=100)
+         video = models.CharField(max_length=80)
+         modo_preparo = models.TextField()
+        ingredientes = models.TextField()
+        nota = models.IntegerField()
+        data_receita = models.DateTimeField(default=datetime.now, blank=True)
+        '''
+ [X]Criando a migration (mapeamento)
+    - preparar todas as models criadas para serem migradas para o banco de dados
+    - no terminal digite 'python manage.py makemigrations'
+
+ [X]Realizando a migration
+    - realizar a migração é criar fisicamente no banco de dados as tabelas preparadas pelo django para o seu ambiente administrativo
+    - No terminal digite 'python manage.py migrate'
+ 
+ []Criando um usuário para o ambiente administrativo
+ - O DJANGO já cria um ambiente administrativo para nossa aplicação, ficando este ambiente em 'http://127.0.0.1:8000/admin/'
+ - Para utilizar o ambiente administrativo precisamos criar um usuário de acesso. No terminal digite 'python manage.py createsuperuser'
+ - *** Obs: Quando digitar a senha, ele vai ficar em branco
+ 
+ []Registrando um modelo no admin
 
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
