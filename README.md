@@ -189,13 +189,21 @@ para incluir as partials nos arquivos de destino utilize o comando include da se
     - realizar a migração é criar fisicamente no banco de dados as tabelas preparadas pelo django para o seu ambiente administrativo
     - No terminal digite 'python manage.py migrate'
  
- []Criando um usuário para o ambiente administrativo
+ [X]Criando um usuário para o ambiente administrativo
  - O DJANGO já cria um ambiente administrativo para nossa aplicação, ficando este ambiente em 'http://127.0.0.1:8000/admin/'
  - Para utilizar o ambiente administrativo precisamos criar um usuário de acesso. No terminal digite 'python manage.py createsuperuser'
  - *** Obs: Quando digitar a senha, ele vai ficar em branco
- 
- []Registrando um modelo no admin
 
+ [X]Registrando um modelo no admin
+    - Para criar o modo referente ao nosso app no ambiente administrativo, precisamos registrar nossos modelos no admin.
+    - Abra o arquivo 'receitas\admin.py e registre seu modelo:
+        ''' python
+        from django.contrib import admin
+        from .models import Receitas
+
+        admin.site.register(Receitas)
+        '''
+        
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 [⬆ Voltar ao topo](#nome-do-projeto)<br>
